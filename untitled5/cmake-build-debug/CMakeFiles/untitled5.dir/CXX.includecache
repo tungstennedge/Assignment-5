@@ -11,8 +11,12 @@ ArrayList.h
 /Users/wayneli/CLionProjects/untitled5/ArrayList.h
 iostream
 /Users/wayneli/CLionProjects/untitled5/iostream
+iterator
+-
 
 /Users/wayneli/CLionProjects/untitled5/ArrayList.h
+iterator
+-
 ArrayList.cpp
 /Users/wayneli/CLionProjects/untitled5/ArrayList.cpp
 
@@ -21,4 +25,6 @@ iostream
 -
 ArrayList.h
 /Users/wayneli/CLionProjects/untitled5/ArrayList.h
+iterator
+-
 

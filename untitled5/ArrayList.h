@@ -1,30 +1,34 @@
 //
 // Created by Wayne Li on 2020-10-27.
 //
-
+#include <iterator>
 #ifndef UNTITLED5_ARRAYLIST_H
 #define UNTITLED5_ARRAYLIST_H
-class Iterator{
-public:
-    Iterator(int i){
-        index = i;
-    }
-    int getI(){
-        return index;
-    }
-    template <typename T>
-    T operator*();
-    Iterator operator++();
-    Iterator operator--();
-    bool operator==(Iterator i);
-private:
-    int index;
-};
 template<typename T>
-class ArrayList {
+class ArrayList{
+public:
+    class Iterator{
+    public:
+        Iterator(int i, ArrayList<T> arr){
+            array_ = arr;
+            index = i;
+        }
+        T operator*();
+        Iterator operator++();
+        Iterator operator--();
+        bool operator==(Iterator i);
+
+
+        ArrayList<T> array_;
+        int index;
+
+    };
 public:
 ArrayList();
 ArrayList(int c);
+T operator[](int i);
+T front();
+T back();
 void copy(T*, int capacity, int length, int front_index);
 bool resize(int n);
 void insertBack(T e);
@@ -35,11 +39,16 @@ void removeFront();
 void removeBack();
 void remove(Iterator i);
 void print_arr();
+int capacity();
+T getVal(int i);
 int size();
 bool empty();
 Iterator end();
 Iterator begin();
-T getAt();
+
+
+
+
 private:
     T* array_;
     int length_;
