@@ -6,7 +6,7 @@
 #include "iostream"
 #include <cstdlib>
 using namespace std;
-string baseString = "qwertyuiopasdfghjklzxcvbnm";
+
 Entry::Entry() {
     string baseString = "qwertyuiopasdfghjklzxcvbnm";
     key = rand()%100;
@@ -17,6 +17,7 @@ Entry::Entry() {
     }
 }
 Entry::Entry(int k) {
+    string baseString = "qwertyuiopasdfghjklzxcvbnm";
     key = k;
 
     for (int i = 0; i < 3; ++i) {
@@ -29,6 +30,13 @@ Entry::Entry(int k, string v) {
     str = v;
 }
 
+int Entry::getKey(){
+    return key;
+}
+string Entry::getData(){
+    return str;
+}
+
 void Entry::printSelf() {
-    cout << "(" << key <<", "<<str<<")"<<"\n";
+    cout<< "("<< key <<", "<< str << ")\n";
 }

@@ -28,6 +28,7 @@ public:
     int levels;
     void put(Entry* e);
     void printList();
+    int findRandomLevel();
     Skip_List();
 };
 

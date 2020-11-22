@@ -9,22 +9,16 @@ using namespace std;
 
 
 class Entry {
-private:
+public:
     int key;
     string str;
-public:
-    int getKey(){
-        return key;
-    }
-    string getData(){
-        return str;
-    }
     void printSelf();
     Entry(int k, string data);
     Entry();
     Entry(int k);
-    void setKey(int i);
-    void setStr(string s);
+
+    int getKey();
+    string getData();
     //~Entry();
 };
 
